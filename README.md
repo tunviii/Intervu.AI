@@ -148,3 +148,10 @@ Intervu.AI is ideal for:
 Intervu.AI is not just about answering questions — it’s about **thinking, explaining, and performing like a real interview candidate**. It bridges the gap between knowing concepts and confidently expressing them in interviews.
 
 ---
+
+## 👩‍💻 Contributors
+
+This project is being collaboratively developed by:
+
+- **Uddandam Tanvi**
+- **Siddhi Shetkar**
