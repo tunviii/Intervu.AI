@@ -1,70 +1,157 @@
-# Getting Started with Create React App
+# Intervu.AI 🤖🎤
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Intervu.AI is an AI-powered mock interview platform built to simulate **real software engineering interviews**. It helps students and early-career engineers improve how they **explain answers**, **think out loud**, and **perform under interview conditions**.
 
-## Available Scripts
+Unlike basic interview chatbots, Intervu.AI focuses on **evaluation, feedback, and realism** — exactly how interviewers assess candidates.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 👩‍💻 Contributors
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is being collaboratively developed by:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Uddandam Tanvi**
+- **Siddhi Shetkar**
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Features
 
-### `npm run build`
+### 1️⃣ Text-Based Interview Practice (Learning Mode)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In this mode, users practice by typing their answers and learning from feedback.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**What the AI does:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Asks common **HR, behavioral, and DSA interview questions**
+* Evaluates the user’s answer
+* Gives a **score out of 10**
+* Explains what went well and what was missing
+* Rewrites the user’s answer into a **clear, confident, interview-ready version**
 
-### `npm run eject`
+**DSA Topics Covered:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Arrays & Strings (Two Sum, Sliding Window, Prefix Sum)
+* Linked Lists (reverse, cycle detection, middle node)
+* Stacks & Queues (valid parentheses, min stack)
+* Trees & BST (traversals, validation, LCA)
+* Basic Graphs (BFS vs DFS)
+* Recursion & Dynamic Programming (basics)
+* Time & Space Complexity and optimization
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This mode is designed for **learning how to explain answers properly**, not memorizing solutions.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 2️⃣ Voice & Video Mock Interview (Test Mode)
 
-## Learn More
+This mode simulates a **real 45–60 minute interview**, similar to a Google Meet or Zoom interview.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**How it works:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* AI interviewer asks questions using **voice**
+* User responds live using **audio and video**
+* Interview includes:
 
-### Code Splitting
+  * Behavioral questions
+  * Deep questions about the user’s own projects
+  * DSA and problem-solving questions with follow-ups
+* No hints or feedback during the interview (just like real interviews)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+After the interview ends, the system analyzes the full session and generates a **detailed interview report**.
 
-### Analyzing the Bundle Size
+**Interview Report Includes:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Overall interview score (out of 100)
+* Section-wise evaluation:
 
-### Making a Progressive Web App
+  * Communication skills
+  * Behavioral responses
+  * Project understanding
+  * DSA & problem solving
+  * Time & space complexity awareness
+  * Confidence and clarity
+* Strengths and weaknesses
+* Common mistakes
+* Final hire recommendation (Strong Hire / Hire / Borderline / No Hire)
+* Actionable improvement tips
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🧠 Why Intervu.AI?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Simulates **real interviewer behavior**, not generic chat
+* Focuses heavily on **DSA reasoning and explanation skills**
+* Includes **project-based questioning**, which most platforms ignore
+* Combines **learning mode + test mode** in one platform
+* Helps users understand **how interviewers actually evaluate candidates**
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🛠️ Tech Stack
 
-### `npm run build` fails to minify
+**Frontend:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* React.js
+* WebRTC (for audio/video interview)
+
+**Backend:**
+
+* Node.js
+* Express.js
+
+**Database:**
+
+* MongoDB
+
+**AI & Integrations:**
+
+* Large Language Model (LLM) for question generation, evaluation, and feedback
+* Speech-to-Text for voice interviews
+* Prompt-based AI agent architecture
+
+---
+
+## 🧩 System Design Overview
+
+* Two AI modes:
+
+  * **Learning Agent** (text-based evaluation and improvement)
+  * **Interview Agent** (voice-based full mock interview)
+* Interview sessions and transcripts are stored for analysis
+* Scores and feedback are generated after evaluation
+
+---
+
+## 📌 Future Improvements
+
+* Resume-based interview customization
+* Role-specific interviews (SDE, ML, Backend, Frontend)
+* Progress tracking over multiple interviews
+* Personalized weak-area practice
+
+---
+
+## 📄 How to Run Locally (High-Level)
+
+1. Clone the repository
+2. Install dependencies for frontend and backend
+3. Set environment variables for LLM API keys
+4. Run backend and frontend servers
+5. Open the app in the browser and start practicing
+
+---
+
+## 🎯 Use Case
+
+Intervu.AI is ideal for:
+
+* Students preparing for internships and placements
+* Developers improving interview communication
+* Anyone who wants realistic mock interview practice
+
+---
+
+## ⭐ Conclusion
+
+Intervu.AI is not just about answering questions — it’s about **thinking, explaining, and performing like a real interview candidate**. It bridges the gap between knowing concepts and confidently expressing them in interviews.
