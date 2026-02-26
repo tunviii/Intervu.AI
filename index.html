@@ -1,255 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Interview Prep</title>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-body {
-    background: radial-gradient(circle at 20% 20%, #0f2027, #0d1117 40%, #000000 100%);
-    color: white;
-    height: 100vh;
-    overflow: hidden;
-}
-
-/* Main Layout */
-.container {
-    height: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* HERO SECTION */
-.hero {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.badge {
-    display: inline-block;
-    padding: 6px 14px;
-    border-radius: 50px;
-    background: rgba(0, 255, 150, 0.1);
-    border: 1px solid rgba(0, 255, 150, 0.3);
-    color: #00ff99;
-    font-size: 12px;
-    margin-bottom: 12px;
-}
-
-h1 {
-    font-size: 52px;
-    font-weight: 700;
-    line-height: 1.15;
-}
-
-.highlight {
-    color: #00ff99;
-}
-
-.subtitle {
-    color: #9aa4b2;
-    font-size: 16px;
-    max-width: 650px;
-    margin: 14px auto;
-    line-height: 1.5;
-}
-
-/* FEATURES */
-.features {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    font-size: 14px;
-    color: #b5c1cf;
-    margin-top: 10px;
-}
-
-/* SECTION TITLE */
-.section-title {
-    font-size: 22px;
-    font-weight: 600;
-    color: #d2d8e0;
-    margin: 20px 0 25px;
-}
-
-/* CARDS */
-.cards {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 32px 28px;
-    width: 380px;   /* increased size */
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    border-color: #00ff99;
-    box-shadow: 0 0 25px rgba(0, 255, 153, 0.2);
-}
-
-/* Center icon + title */
-.card-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 8px;
-}
-
-.card-icon {
-    font-size: 24px;
-}
-
-.card h3 {
-    font-size: 20px;
-    margin: 0;
-}
-
-.card p {
-    color: #9aa4b2;
-    font-size: 14px;
-    margin-bottom: 16px;
-    text-align: center;
-}
-
-/* CENTER BULLETS */
-.card ul {
-    list-style: none;
-    text-align: center;
-}
-
-.card ul li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #cbd5e1;
-}
-
-.card ul li::before {
-    content: "• ";
-    color: #00ff99;
-    font-weight: bold;
-}
-
-/* FOOTER */
-.footer {
-    position: absolute;
-    bottom: 12px;
-    width: 100%;
-    text-align: center;
-    color: #666;
-    font-size: 13px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-
-    h1 {
-        font-size: 36px;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    body {
-        overflow: auto;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <div class="hero">
-
-        <div class="badge">⚡ AI-Powered Interview Prep</div>
-
-        <h1>
-            Master Your <span class="highlight">Technical Interview</span>
-        </h1>
-
-        <p class="subtitle">
-            Practice DSA questions, get instant feedback, and simulate real interviews 
-            with our AI coach. Land your dream job with confidence.
-        </p>
-
-        <div class="features">
-            <div>💻 Data Structures & Algorithms</div>
-            <div>⚡ Real-time Feedback</div>
-        </div>
-
-    </div>
-
-    <div class="section-title">Choose Your Interview Mode</div>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <div class="card-title">
-                <span class="card-icon">📘</span>
-                <h3>Practice Mode</h3>
-            </div>
-
-            <p>Learn with instant feedback after each answer</p>
-
-            <ul>
-                <li>Get scored after every answer</li>
-                <li>See improved sample answers</li>
-                <li>Learn from your mistakes</li>
-                <li>No time pressure</li>
-            </ul>
-        </div>
-
-        <div class="card">
-
-            <div class="card-title">
-                <span class="card-icon">📋</span>
-                <h3>Test Mode</h3>
-            </div>
-
-            <p>Simulate a real 45–60 min technical interview</p>
-
-            <ul>
-                <li>15–20 realistic questions</li>
-                <li>No hints during interview</li>
-                <li>Comprehensive final report</li>
-                <li>Hire recommendation included</li>
-            </ul>
-        </div>
-
-    </div>
-
-</div>
-
-<footer class="footer">
-    Practice smarter. Interview better. Get hired.
-</footer>
-
-</body>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
 </html>
