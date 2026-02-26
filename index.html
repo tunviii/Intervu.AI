@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Interview Prep</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -19,114 +18,126 @@
 body {
     background: radial-gradient(circle at 20% 20%, #0f2027, #0d1117 40%, #000000 100%);
     color: white;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* Container */
+/* Main Layout */
 .container {
-    width: 90%;
+    height: 100%;
     max-width: 1200px;
     margin: auto;
-    text-align: center;
-    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Tag */
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
 .badge {
     display: inline-block;
-    padding: 8px 18px;
+    padding: 6px 14px;
     border-radius: 50px;
     background: rgba(0, 255, 150, 0.1);
     border: 1px solid rgba(0, 255, 150, 0.3);
     color: #00ff99;
-    font-size: 14px;
-    margin-bottom: 30px;
+    font-size: 12px;
+    margin-bottom: 12px;
 }
 
-/* Heading */
 h1 {
-    font-size: 56px;
+    font-size: 52px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.15;
 }
 
 .highlight {
     color: #00ff99;
 }
 
-/* Subtitle */
 .subtitle {
-    margin-top: 20px;
     color: #9aa4b2;
-    font-size: 18px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
+    font-size: 16px;
+    max-width: 650px;
+    margin: 14px auto;
+    line-height: 1.5;
 }
 
-/* Feature row */
+/* FEATURES */
 .features {
-    margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 40px;
     font-size: 14px;
     color: #b5c1cf;
+    margin-top: 10px;
 }
 
-/* Mode Title */
+/* SECTION TITLE */
 .section-title {
-    margin-top: 80px;
     font-size: 22px;
     font-weight: 600;
     color: #d2d8e0;
+    margin: 20px 0 25px;
 }
 
-/* Cards */
+/* CARDS */
 .cards {
     display: flex;
-    justify-content: center;
     gap: 40px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
-    padding: 40px 30px;
-    width: 350px;
+    padding: 32px 28px;
+    width: 380px;   /* increased size */
     backdrop-filter: blur(10px);
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     border-color: #00ff99;
     box-shadow: 0 0 25px rgba(0, 255, 153, 0.2);
 }
 
+/* Center icon + title */
+.card-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
 .card-icon {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 24px;
 }
 
 .card h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin: 0;
 }
 
 .card p {
     color: #9aa4b2;
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
+/* CENTER BULLETS */
 .card ul {
     list-style: none;
-    text-align: left;
+    text-align: center;
 }
 
 .card ul li {
@@ -136,21 +147,35 @@ h1 {
 }
 
 .card ul li::before {
-    content: "•";
+    content: "• ";
     color: #00ff99;
     font-weight: bold;
-    margin-right: 8px;
+}
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+
     h1 {
-        font-size: 38px;
+        font-size: 36px;
     }
 
     .cards {
         flex-direction: column;
         align-items: center;
+    }
+
+    body {
+        overflow: auto;
     }
 }
 </style>
@@ -160,31 +185,39 @@ h1 {
 
 <div class="container">
 
-    <div class="badge">⚡ AI-Powered Interview Prep</div>
+    <div class="hero">
 
-    <h1>
-        Master Your <span class="highlight">Technical Interview</span>
-    </h1>
+        <div class="badge">⚡ AI-Powered Interview Prep</div>
 
-    <p class="subtitle">
-        Practice DSA questions, get instant feedback, and simulate real interviews 
-        with our AI coach. Land your dream job with confidence.
-    </p>
+        <h1>
+            Master Your <span class="highlight">Technical Interview</span>
+        </h1>
 
-    <div class="features">
-        <div>💻 Data Structures & Algorithms</div>
-        <div>⚡ Real-time Feedback</div>
+        <p class="subtitle">
+            Practice DSA questions, get instant feedback, and simulate real interviews 
+            with our AI coach. Land your dream job with confidence.
+        </p>
+
+        <div class="features">
+            <div>💻 Data Structures & Algorithms</div>
+            <div>⚡ Real-time Feedback</div>
+        </div>
+
     </div>
 
     <div class="section-title">Choose Your Interview Mode</div>
 
     <div class="cards">
 
-        <!-- Practice Card -->
         <div class="card">
-            <div class="card-icon">📘</div>
-            <h3>Practice Mode</h3>
+
+            <div class="card-title">
+                <span class="card-icon">📘</span>
+                <h3>Practice Mode</h3>
+            </div>
+
             <p>Learn with instant feedback after each answer</p>
+
             <ul>
                 <li>Get scored after every answer</li>
                 <li>See improved sample answers</li>
@@ -193,11 +226,15 @@ h1 {
             </ul>
         </div>
 
-        <!-- Test Card -->
         <div class="card">
-            <div class="card-icon">📋</div>
-            <h3>Test Mode</h3>
+
+            <div class="card-title">
+                <span class="card-icon">📋</span>
+                <h3>Test Mode</h3>
+            </div>
+
             <p>Simulate a real 45–60 min technical interview</p>
+
             <ul>
                 <li>15–20 realistic questions</li>
                 <li>No hints during interview</li>
@@ -209,6 +246,10 @@ h1 {
     </div>
 
 </div>
+
+<footer class="footer">
+    Practice smarter. Interview better. Get hired.
+</footer>
 
 </body>
 </html>
