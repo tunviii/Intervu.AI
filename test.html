@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interview Prep - Mock Interview</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.1"><path d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/></g></g></svg>');
+    pointer-events: none;
+  }
+
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 60px 50px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    z-index: 1;
+    animation: slideUp 0.8s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  h1 {
+    color: #333;
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .subtitle {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .features {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    gap: 20px;
+  }
+
+  .feature {
+    flex: 1;
+  }
+
+  .feature-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .feature-text {
+    color: #666;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .start-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 18px 50px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+  }
+
+  .start-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+  }
+
+  .start-btn:active {
+    transform: translateY(-1px);
+  }
+
+  .footer-text {
+    color: #999;
+    font-size: 12px;
+    margin-top: 30px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="icon">🎤</div>
+  <h1>Mock Interview Simulator</h1>
+  <p class="subtitle">Prepare yourself with our AI-powered interview preparation tool. Practice, record, and improve your interview skills.</p>
+  
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">📹</div>
+      <div class="feature-text">Video Recording</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🎵</div>
+      <div class="feature-text">Audio Capture</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">✨</div>
+      <div class="feature-text">AI Analysis</div>
+    </div>
+  </div>
+
+  <button class="start-btn" onclick="startInterview()">
+    🚀 Start Interview
+  </button>
+  
+  <p class="footer-text">Get ready for your next big opportunity</p>
+</div>
+
+<script>
+function startInterview() {
+    window.location.href = "interview.html";
+}
+</script>
+
+</body>
+</html>
