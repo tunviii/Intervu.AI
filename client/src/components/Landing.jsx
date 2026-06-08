@@ -167,11 +167,42 @@ function Landing({ user, logout, openPractice, openInterview, openDashboard, ope
               </div>
             </div>
 
-          </div>
+            {/* RESUME ANALYZER — full-width card */}
+            <div className={`${styles.card} ${styles.cardWide}`} onClick={() => navigate('/resume')}>
+              <div className={styles.cardGlow}></div>
+              <span className={`${styles.modeBadge} ${styles.tagNew}`}>New</span>
 
-          <button onClick={() => navigate('/resume')}>
-   Go to Resume Analyzer
-</button>
+              <div className={styles.resumeCardInner}>
+                <div className={styles.resumeCardLeft}>
+                  <div className={styles.cardIconWrap}>📄</div>
+                  <div>
+                    <div className={styles.cardTitleText}>Resume Analyzer</div>
+                    <p className={styles.cardDesc}>Upload your resume and get instant AI-powered ATS scoring, strength analysis, and actionable improvements.</p>
+                  </div>
+                </div>
+
+                <div className={styles.resumeCardDivider}></div>
+
+                <ul className={styles.resumeFeatureRow}>
+                  <li><span>📊</span>ATS Score</li>
+                  <li><span>✅</span>Strong Points</li>
+                  <li><span>⚠️</span>Weak Areas</li>
+                  <li><span>💡</span>Suggestions</li>
+                </ul>
+
+                <div className={styles.cardCta}>
+                  <span className={styles.cardCtaText}>Analyze Resume</span>
+                  <div className={styles.cardArrow}>
+                    <svg viewBox="0 0 14 14">
+                      <line x1="2" y1="7" x2="12" y2="7" />
+                      <polyline points="8,3 12,7 8,11" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
 
           {/* STATS */}
           <div className={styles.statsBar}>
