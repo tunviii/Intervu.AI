@@ -13,6 +13,7 @@ import Topics from './components/Topics';
 import Auth from "./components/Auth";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CompaniesPage from "./components/CompaniesPage";
+import ResumeAnalyzer from "./components/ResumeAnalyzer";
 
 
 import { auth } from "./firebase/firebase";
@@ -172,6 +173,15 @@ useEffect(() => {
   element={
     <ProtectedRoute user={user}>
       <Topics goBack={() => navigate("/practice-mode")} />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/resume"
+  element={
+    <ProtectedRoute user={user}>
+      <ResumeAnalyzer />
     </ProtectedRoute>
   }
 />

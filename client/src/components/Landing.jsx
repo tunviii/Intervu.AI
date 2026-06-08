@@ -169,6 +169,10 @@ function Landing({ user, logout, openPractice, openInterview, openDashboard, ope
 
           </div>
 
+          <button onClick={() => navigate('/resume')}>
+   Go to Resume Analyzer
+</button>
+
           {/* STATS */}
           <div className={styles.statsBar}>
             <div className={styles.stat}>
