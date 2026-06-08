@@ -154,7 +154,7 @@
 /* ── INNER CONTAINER ── */
 .container {
   width: 100%;
-  max-width: 860px;
+  max-width: 1200px;
   margin: 0 auto;
   z-index: 1;
 }
@@ -488,6 +488,104 @@
   background: rgba(255, 190, 0, 0.08);
   color: #ffbe00;
   border: 1px solid rgba(255, 190, 0, 0.2);
+}
+
+.modeBadge.tagNew {
+  background: rgba(100, 160, 255, 0.10);
+  color: #7eb8ff;
+  border: 1px solid rgba(100, 160, 255, 0.25);
+}
+
+/* ── WIDE RESUME CARD ── */
+.cardWide {
+  width: 100%;
+  padding: 28px 32px;
+}
+
+.resumeCardInner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.resumeCardLeft {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+  min-width: 220px;
+}
+
+.resumeCardLeft .cardDesc {
+  margin-bottom: 0;
+  max-width: 320px;
+}
+
+.resumeCardDivider {
+  width: 1px;
+  align-self: stretch;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.resumeFeatureRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.resumeFeatureRow li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 18px;
+  background: var(--green-dim);
+  border: 1px solid rgba(0, 255, 153, 0.12);
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-mid);
+  transition: background 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.resumeFeatureRow li span {
+  font-size: 18px;
+}
+
+.card:hover .resumeFeatureRow li {
+  background: rgba(0, 255, 153, 0.07);
+  border-color: rgba(0, 255, 153, 0.22);
+}
+
+.cardWide .cardCta {
+  flex-shrink: 0;
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--green-dim);
+  border: 1px solid rgba(0, 255, 153, 0.18);
+  border-radius: 12px;
+  min-width: 120px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.card:hover .cardWide .cardCta,
+.cardWide:hover .cardCta {
+  background: rgba(0, 255, 153, 0.1);
+  border-color: rgba(0, 255, 153, 0.35);
 }
 
 /* ── STATS BAR ── */
