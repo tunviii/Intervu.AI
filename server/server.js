@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
-
+import resumeRoute from "./routes/resume.js";
 import express from "express";
 import cors from "cors";
 
@@ -33,6 +33,7 @@ app.use("/api/practice", practiceRoute);
 app.use("/api/interview", interviewRoute);
 app.use("/api/users", userRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use("/api/resume", resumeRoute);
 
 /* CONNECT DATABASE */
 mongoose.connect(process.env.MONGO_URI)
